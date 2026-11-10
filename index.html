@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YouTube Thumbnail Design &amp; A/B Testing | Thumbsprint</title>
+<meta name="description" content="Custom YouTube thumbnails and titles, A/B tested with YouTube Test &amp; Compare. Plus covers for Shorts, Reels and TikTok. 24-hour delivery, worldwide. Get one thumbnail redesigned free.">
+<meta name="keywords" content="youtube thumbnail designer, youtube thumbnail design service, custom youtube thumbnails, thumbnail a/b testing, youtube shorts thumbnail, youtube title writing, increase youtube ctr">
+<link rel="canonical" href="https://thumbsprint.com/">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0b">
+
+<!-- Social sharing (WhatsApp, Facebook, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thumbsprint">
+<meta property="og:url" content="https://thumbsprint.com/">
+<meta property="og:title" content="Thumbsprint · Better Thumbs. Bigger Views.">
+<meta property="og:description" content="YouTube thumbnails and titles, A/B tested on your own channel. Get one thumbnail redesigned free.">
+<meta property="og:image" content="https://thumbsprint.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thumbsprint · Better Thumbs. Bigger Views.">
+<meta name="twitter:description" content="YouTube thumbnails and titles, A/B tested on your own channel.">
+<meta name="twitter:image" content="https://thumbsprint.com/og-image.jpg">
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Thumbsprint",
+  "slogan": "Better Thumbs. Bigger Views.",
+  "url": "https://thumbsprint.com/",
+  "email": "hello@thumbsprint.com",
+  "description": "YouTube thumbnail and title design with A/B testing, plus covers for Shorts, Reels and TikTok.",
+  "address": { "@type": "PostalAddress", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Thumbnail design packages",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Click Pack", "price": "45", "priceCurrency": "USD", "description": "1 thumbnail and 5 title options" },
+      { "@type": "Offer", "name": "A/B Test Pro", "price": "75", "priceCurrency": "USD", "description": "3 thumbnail versions for YouTube Test & Compare, 5 titles" },
+      { "@type": "Offer", "name": "Monthly", "price": "450", "priceCurrency": "USD", "description": "8 videos a month with A/B Test Pro" },
+      { "@type": "Offer", "name": "Shorts Pack", "price": "60", "priceCurrency": "USD", "description": "10 vertical covers for Shorts, Reels and TikTok" }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Can a thumbnail alone get me more views?", "acceptedAnswer": { "@type": "Answer", "text": "A thumbnail raises your click-through rate, so more of the people YouTube shows your video to will click. Views also depend on your content keeping them watching. We promise a better CTR, and your video does the rest." } },
+    { "@type": "Question", "name": "How does A/B testing work?", "acceptedAnswer": { "@type": "Answer", "text": "YouTube Studio's Test & Compare lets you upload up to three thumbnails for one video. YouTube shows each to different viewers and tells you which one got the most watch time." } },
+    { "@type": "Question", "name": "Do you design for Shorts, Reels and TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vertical covers are 1080 × 1920 and we keep faces and text in the area each app shows. A/B testing is only available for long-form videos." } },
+    { "@type": "Question", "name": "Which time zone are you in?", "acceptedAnswer": { "@type": "Answer", "text": "We work from India (IST). If you're in the US or UK, send your video in the evening and the designs are ready when you wake up." } }
+  ]
+}
+</script>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: premium studio — editorial split hero, tilted moving wall of thumbnails, then proof (slider, A/B test, math), offer, process, voices, FAQ, glowing CTA */
+:root {
+  color-scheme: dark;
+  --bg: #0a0a0b;
+  --bg-2: #111113;
+  --glass: rgba(255,255,255,.045);
+  --glass-hi: rgba(255,255,255,.08);
+  --line: rgba(255,255,255,.09);
+  --fg: #f6f5f3;
+  --muted: #9b99a1;
+  --red: #ff3b30;
+  --red-deep: #d42a20;
+  --yellow: #ffd60a;
+  --win: #34c759;
+  --ink: #0d0d0d;
+  --display: "Montserrat", "Arial Black", system-ui, sans-serif;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-family: var(--display); line-height: 1.04; text-wrap: balance; letter-spacing: -.02em; }
+p { margin: 0; }
+em.s { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+section { padding-block: clamp(72px, 11vw, 140px); position: relative; }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 10px; }
+.label::before { content: ""; width: 18px; height: 1px; background: var(--red); }
+.h2 { font-size: clamp(34px, 5.2vw, 64px); font-weight: 900; }
+.h2 em.s { color: var(--yellow); font-size: 1.08em; }
+.sub { color: var(--muted); font-size: clamp(16px, 1.4vw, 18px); max-width: 560px; }
+.head { display: grid; gap: 18px; margin-bottom: clamp(40px, 6vw, 64px); }
+.head.split { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 24px 48px; }
+.head.split > * { min-width: 0; }
+@media (max-width: 860px) { .head.split { grid-template-columns: 1fr; } }
+
+.glass { background: linear-gradient(180deg, var(--glass-hi), var(--glass)); border: 1px solid var(--line); border-radius: 22px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 15px; padding: 15px 24px; border-radius: 999px; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s, background .2s, border-color .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-red { background: var(--red); color: #fff; box-shadow: 0 10px 30px -10px rgba(255,59,48,.7); }
+.btn-red:hover { background: var(--red-deep); box-shadow: 0 16px 40px -12px rgba(255,59,48,.9); }
+.btn-line { border-color: var(--line); color: var(--fg); background: var(--glass); }
+.btn-line:hover { border-color: rgba(255,255,255,.3); }
+.btn .arr { transition: transform .2s; }
+.btn:hover .arr { transform: translateX(3px); }
+:is(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+
+/* header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: rgba(10,10,11,.6); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; gap: 28px; height: 70px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 900; font-size: 18px; letter-spacing: .03em; }
+.brand svg { width: 32px; height: 32px; flex: none; }
+.nav-links { display: flex; gap: 30px; margin-left: auto; }
+.nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--fg); }
+.nav .btn { padding: 11px 18px; font-size: 13px; }
+@media (max-width: 860px) { .nav-links { display: none; } .nav .btn { margin-left: auto; } }
+
+/* hero */
+.hero { padding-block: clamp(56px, 8vw, 104px) 0; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 120%; background: radial-gradient(40% 50% at 18% 20%, rgba(255,59,48,.22), transparent 70%), radial-gradient(30% 40% at 85% 10%, rgba(255,214,10,.10), transparent 70%); pointer-events: none; }
+.pill { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 10px; border-radius: 999px; font-size: 13px; color: var(--fg); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--win); box-shadow: 0 0 0 4px rgba(52,199,89,.18); animation: pulse 2s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(52,199,89,0); } }
+.hero-grid { position: relative; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px 56px; align-items: stretch; margin-top: 28px; }
+.hero-side { display: flex !important; flex-direction: column; justify-content: space-between; }
+.hero-vis { position: relative; height: clamp(230px, 22vw, 300px); margin-top: 8px; animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-8px); } }
+.hv { position: absolute; width: 76%; }
+.hv.back { left: 0; top: 0; transform: rotate(-6deg); opacity: .8; }
+.hv.front { right: 0; bottom: 0; transform: rotate(3deg); filter: drop-shadow(0 30px 40px rgba(255,59,48,.35)); }
+.hv .chip { position: absolute; right: 10px; top: 10px; z-index: 4; font-family: var(--mono); font-size: 11px; padding: 4px 8px; border-radius: 6px; background: rgba(10,10,11,.75); backdrop-filter: blur(6px); }
+.hv .chip b { font-weight: 500; }
+.hv.front .chip b { color: var(--win); }
+.boost { position: absolute; left: 2%; bottom: 4%; z-index: 5; display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 14px; font-size: 13px; }
+.boost strong { font-family: var(--display); font-size: 18px; color: var(--yellow); }
+.hero-grid > * { min-width: 0; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero h1 { font-size: clamp(52px, 9.6vw, 136px); font-weight: 900; line-height: .92; letter-spacing: -.035em; }
+.hero h1 .y { color: var(--yellow); }
+.hero h1 em.s { color: var(--red); font-size: 1.1em; letter-spacing: -.01em; }
+.rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.rise.d2 { animation-delay: .12s; } .rise.d3 { animation-delay: .24s; }
+@keyframes rise { from { transform: translateY(18px); } to { transform: none; } }
+.hero-side { display: grid; gap: 26px; padding-bottom: 12px; }
+.hero-side p { color: var(--muted); font-size: 18px; }
+.hero-side p b { color: var(--fg); font-weight: 600; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* moving wall */
+.wall { position: relative; margin-top: clamp(56px, 8vw, 96px); padding-block: 26px 10px; transform: rotate(-2.5deg); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.row { display: flex; gap: 18px; width: max-content; animation: slide 70s linear infinite; }
+.row + .row { margin-top: 18px; animation-direction: reverse; animation-duration: 80s; }
+.wall:hover .row { animation-play-state: paused; }
+@keyframes slide { to { transform: translateX(-50%); } }
+.tile { position: relative; width: clamp(230px, 24vw, 330px); flex: none; border-radius: 14px; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.tile:hover { transform: translateY(-6px) scale(1.03); }
+.tile .chip { display: block; margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.tile .chip b { color: var(--win); font-weight: 500; }
+
+/* stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); margin-top: clamp(48px, 7vw, 80px); }
+.stat { padding: 28px 24px 0 0; display: grid; gap: 4px; }
+.stat + .stat { padding-left: 24px; border-left: 1px solid var(--line); }
+.stat .n { font-family: var(--display); font-weight: 900; font-size: clamp(34px, 4vw, 52px); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .n i { font-style: normal; color: var(--red); }
+.stat span { color: var(--muted); font-size: 14px; }
+.note { margin-top: 18px; font-size: 12px; color: var(--muted); opacity: .8; }
+@media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; } .stat:nth-child(3) { border-left: 0; padding-left: 0; } .stat { padding-bottom: 20px; } }
+
+/* thumbnails (16:9, drawn in CSS) */
+.thumb { position: relative; aspect-ratio: 16 / 9; width: 100%; max-width: 100%; border-radius: 14px; overflow: hidden; container-type: inline-size; background: #222; box-shadow: 0 20px 40px -20px rgba(0,0,0,.8); }
+.thumb .dur { position: absolute; right: 4%; bottom: 6%; z-index: 3; background: rgba(0,0,0,.85); color: #fff; font: 600 max(9px, 4cqw)/1 var(--body); padding: .8cqw 1.4cqw; border-radius: 1cqw; }
+.hl { position: absolute; z-index: 2; left: 6%; top: 10%; max-width: 60%; font: 900 11.5cqw/.9 var(--display); color: #fff; text-transform: uppercase; letter-spacing: -.01em; -webkit-text-stroke: .5cqw #000; paint-order: stroke fill; text-shadow: 0 .9cqw 0 #000; }
+.hl span { display: block; color: var(--yellow); font-size: .62em; margin-top: 1.4cqw; }
+.hl.bot { top: auto; bottom: 12%; }
+.hl.wide { max-width: 88%; }
+.hl.dk { color: #111; -webkit-text-stroke: 0; text-shadow: none; }
+.hl.dk span { color: #fff; -webkit-text-stroke: .4cqw #000; text-shadow: 0 .7cqw 0 #000; }
+.sil { position: absolute; z-index: 1; right: 3%; bottom: 0; width: 40%; height: 94%; filter: drop-shadow(0 0 1.4cqw var(--rim, #fff)); }
+.sil::before { content: ""; position: absolute; left: 27%; top: 6%; width: 46%; aspect-ratio: .85; border-radius: 50% 50% 46% 46%; background: var(--ink); }
+.sil::after { content: ""; position: absolute; left: 2%; right: 2%; bottom: 0; height: 40%; border-radius: 48% 48% 0 0 / 80% 80% 0 0; background: var(--ink); }
+.arrow { position: absolute; z-index: 2; width: 15%; aspect-ratio: 1; }
+.peak, .peak2 { position: absolute; bottom: 0; clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+.peak { right: -4%; width: 66%; height: 78%; background: #1a0605; }
+.peak2 { right: 30%; width: 40%; height: 48%; background: #2b0b08; }
+.moon { position: absolute; right: 10%; top: 12%; width: 22%; aspect-ratio: 1; border-radius: 50%; background: #f2e9c9; box-shadow: 0 0 6cqw rgba(242,233,201,.5); }
+.ridge { position: absolute; bottom: 0; left: 0; right: 0; height: 34%; background: #050d18; clip-path: polygon(0 100%, 0 40%, 18% 10%, 34% 50%, 52% 0, 70% 45%, 86% 20%, 100% 55%, 100% 100%); }
+.chart { position: absolute; z-index: 1; inset: 50% 6% 16% 6%; width: 88%; height: 34%; }
+.half { position: absolute; top: 0; bottom: 0; width: 50%; display: grid; place-items: center; font: 900 11cqw/1 var(--display); color: #fff; text-transform: uppercase; -webkit-text-stroke: .4cqw #000; paint-order: stroke fill; }
+.half.l { left: 0; } .half.r { right: 0; }
+.vs { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 18%; aspect-ratio: 1; border-radius: 50%; background: var(--yellow); color: #111; display: grid; place-items: center; font: 900 6cqw/1 var(--display); border: .8cqw solid #000; }
+.mic { position: absolute; right: 24%; bottom: 0; width: 20%; height: 72%; }
+.mic::before { content: ""; position: absolute; left: 20%; right: 20%; top: 0; height: 55%; border-radius: 99px; background: repeating-linear-gradient(0deg, #d8d8d8 0 3px, #8a8a8a 3px 6px); }
+.mic::after { content: ""; position: absolute; left: 46%; width: 8%; top: 55%; bottom: 0; background: #8a8a8a; }
+.dull-txt { position: absolute; left: 6%; top: 8%; right: 6%; color: #fff; font: 500 5.6cqw/1.25 var(--body); text-shadow: 0 1px 2px rgba(0,0,0,.4); }
+.hill { position: absolute; bottom: 18%; left: -5%; width: 70%; height: 40%; background: #8d968a; clip-path: polygon(0 100%, 45% 10%, 100% 100%); }
+
+/* before / after */
+.compare { position: relative; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 40px 100px -40px rgba(255,59,48,.35); }
+.compare .thumb { border-radius: 0; box-shadow: none; }
+.compare .over { position: absolute; inset: 0; z-index: 3; clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.compare .over .thumb { height: 100%; }
+.compare .bar { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; background: #fff; transform: translateX(-50%); pointer-events: none; z-index: 4; }
+.compare .knob { position: absolute; top: 50%; left: var(--pos, 50%); transform: translate(-50%, -50%); z-index: 5; width: 54px; height: 54px; border-radius: 50%; background: rgba(255,255,255,.92); color: #111; display: grid; place-items: center; font-weight: 700; font-size: 18px; pointer-events: none; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+.compare .tag { position: absolute; top: 16px; z-index: 4; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 8px; background: rgba(10,10,11,.75); backdrop-filter: blur(6px); pointer-events: none; }
+.compare .tag.l { left: 16px; } .compare .tag.r { right: 16px; }
+.compare input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 6; margin: 0; }
+.rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; border-top: 1px solid var(--line); }
+.rules > div { padding: 24px 22px 0 0; display: grid; gap: 8px; align-content: start; }
+.rules > div + div { padding-left: 22px; border-left: 1px solid var(--line); }
+.rules h3 { font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+.rules p { color: var(--muted); font-size: 14px; }
+@media (max-width: 860px) { .rules { grid-template-columns: 1fr 1fr; } .rules > div:nth-child(3) { border-left: 0; padding-left: 0; } .rules > div { padding-bottom: 22px; } }
+@media (max-width: 480px) { .rules { grid-template-columns: 1fr; } .rules > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); } }
+.specs { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.specs span { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+
+/* A/B */
+.ab { display: grid; grid-template-columns: 1fr 1.35fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.ab > * { min-width: 0; }
+@media (max-width: 960px) { .ab { grid-template-columns: 1fr; } }
+.ab-card { padding: clamp(18px, 2.4vw, 28px); }
+.ab-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.ab-top strong { font-family: var(--display); font-size: 15px; }
+.ab-top small { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 4px 9px; border-radius: 999px; }
+.vars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 560px) { .vars { grid-template-columns: 1fr; } }
+.var { display: grid; gap: 10px; padding: 10px; border-radius: 16px; border: 1px solid transparent; }
+.var.win { border-color: rgba(52,199,89,.5); background: rgba(52,199,89,.06); }
+.var .meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+.var .meta b { font-family: var(--display); }
+.var .w { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; background: var(--win); color: #052b10; padding: 3px 8px; border-radius: 999px; font-weight: 700; }
+.meter { height: 6px; border-radius: 99px; background: rgba(255,255,255,.08); overflow: hidden; }
+.meter i { display: block; height: 100%; border-radius: 99px; background: var(--muted); width: var(--w); }
+.var.win .meter i { background: var(--yellow); }
+.var .pct { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.var .pct b { color: var(--fg); font-size: 18px; font-weight: 500; }
+.ab-list { display: grid; gap: 18px; margin-top: 30px; }
+.ab-list div { display: grid; grid-template-columns: 28px 1fr; gap: 14px; }
+.ab-list i { font-style: normal; font-family: var(--mono); color: var(--yellow); font-size: 13px; padding-top: 2px; }
+.ab-list p { color: var(--muted); }
+.ab-list b { color: var(--fg); font-weight: 600; }
+
+/* calculator */
+.calc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.calc > * { min-width: 0; }
+@media (max-width: 900px) { .calc { grid-template-columns: 1fr; } }
+.formula { margin-top: 28px; font-family: var(--mono); font-size: 15px; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--line); background: var(--glass); color: var(--muted); overflow-x: auto; }
+.formula b { color: var(--yellow); font-weight: 500; }
+.calc-box { padding: clamp(22px, 3vw, 34px); display: grid; gap: 22px; }
+.field { display: grid; gap: 10px; }
+.field label { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); }
+.field output { font-family: var(--mono); color: var(--fg); font-variant-numeric: tabular-nums; }
+.field input { width: 100%; accent-color: var(--red); }
+.result { border-top: 1px solid var(--line); padding-top: 22px; display: grid; gap: 6px; }
+.result .num { font-family: var(--display); font-weight: 900; font-size: clamp(44px, 6vw, 72px); line-height: 1; color: var(--yellow); font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+.result small { color: var(--muted); font-size: 14px; }
+
+/* pricing */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+@media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+.plan { padding: 28px 24px; display: flex; flex-direction: column; gap: 18px; position: relative; }
+.plan.hot { background: linear-gradient(var(--bg-2), var(--bg-2)) padding-box, linear-gradient(160deg, var(--red), var(--yellow) 60%, rgba(255,255,255,.08)) border-box; border: 1px solid transparent; box-shadow: 0 30px 80px -30px rgba(255,59,48,.5); }
+.plan .badge { position: absolute; top: -12px; right: 20px; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; background: var(--red); color: #fff; padding: 5px 10px; border-radius: 999px; }
+.plan h3 { font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+.plan .price { font-family: var(--display); font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -.03em; }
+.plan .price small { font-size: 15px; color: var(--muted); font-weight: 700; letter-spacing: 0; }
+.plan .desc { color: var(--muted); font-size: 14px; min-height: 44px; }
+.plan ul { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: 14px; flex: 1; align-content: start; }
+.plan li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; }
+.plan li::before { content: "✓"; color: var(--yellow); font-weight: 700; }
+.promise { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 20px 24px; color: var(--muted); font-size: 15px; }
+.promise b { color: var(--fg); }
+
+/* process */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 960px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+.step { padding: 26px 22px; display: grid; gap: 10px; align-content: start; }
+.step .n { font-family: var(--serif); font-style: italic; font-size: 44px; line-height: 1; color: var(--red); }
+.step h3 { font-size: 19px; font-weight: 800; letter-spacing: -.01em; }
+.step p { color: var(--muted); font-size: 15px; }
+.step .when { font-family: var(--mono); font-size: 12px; color: var(--yellow); margin-top: 6px; }
+
+/* voices */
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+.quote { padding: 28px 26px; display: flex; flex-direction: column; gap: 22px; }
+.quote blockquote { margin: 0; font-family: var(--serif); font-size: clamp(22px, 2.1vw, 26px); line-height: 1.3; flex: 1; }
+.who { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.av { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 900; font-size: 14px; color: #111; flex: none; }
+.who div span { color: var(--muted); display: block; font-size: 13px; }
+.who .lift { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--win); white-space: nowrap; }
+
+/* faq */
+.faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+.faq-grid > * { min-width: 0; }
+@media (max-width: 900px) { .faq-grid { grid-template-columns: 1fr; } }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-child { border-top: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 24px 0; font-family: var(--display); font-weight: 800; font-size: 18px; display: flex; justify-content: space-between; gap: 20px; letter-spacing: -.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--body); font-weight: 400; font-size: 26px; line-height: .8; color: var(--yellow); transition: transform .25s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 24px; color: var(--muted); max-width: 64ch; }
+
+/* cta */
+.cta { position: relative; overflow: hidden; border-radius: 32px; padding: clamp(32px, 6vw, 72px); background: radial-gradient(60% 80% at 0% 0%, rgba(255,59,48,.55), transparent 60%), radial-gradient(50% 70% at 100% 100%, rgba(255,214,10,.22), transparent 60%), var(--bg-2); border: 1px solid var(--line); display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.cta > * { min-width: 0; }
+@media (max-width: 900px) { .cta { grid-template-columns: 1fr; } }
+.cta h2 { font-size: clamp(38px, 5.6vw, 72px); font-weight: 900; }
+.cta h2 em.s { color: var(--yellow); }
+.cta .sub { margin-top: 18px; color: rgba(246,245,243,.8); }
+.mails { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+.mail { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; border-radius: 12px; font-family: var(--mono); font-size: 14px; user-select: all; }
+.mail svg { width: 18px; height: 18px; fill: currentColor; }
+.form { padding: clamp(20px, 3vw, 30px); display: grid; gap: 14px; background: rgba(10,10,11,.65); }
+.form label { display: grid; gap: 7px; font-size: 13px; color: var(--muted); }
+.form input, .form select, .form textarea { font: inherit; font-size: 15px; color: var(--fg); background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; width: 100%; transition: border-color .2s; }
+.form input:hover, .form select:hover, .form textarea:hover { border-color: rgba(255,255,255,.2); }
+.form select option { background: var(--bg-2); }
+.form textarea { min-height: 88px; resize: vertical; }
+.form .btn { width: 100%; }
+.form-msg { font-size: 14px; }
+
+/* portrait + square thumbnails */
+.thumb.v { aspect-ratio: 9 / 16; border-radius: 0; box-shadow: none; }
+.v .hl { top: 16%; left: 8%; max-width: 86%; font-size: 17cqw; }
+.v .sil { right: 5%; width: 90%; height: 58%; }
+.thumb.sq { aspect-ratio: 1; }
+.sq .hl { font-size: 14cqw; top: 10%; }
+
+/* every platform */
+.plat-top { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+.toggle[aria-pressed="true"] { background: var(--yellow); color: #111; border-color: var(--yellow); }
+.plat-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 18px; margin-top: clamp(32px, 5vw, 52px); }
+.plat-grid > * { min-width: 0; }
+@media (max-width: 900px) { .plat-grid { grid-template-columns: 1fr; } }
+.device { padding: clamp(14px, 2vw, 20px); display: flex; flex-direction: column; gap: 14px; }
+.dev-label { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 14px; margin-top: auto; }
+.dev-label b { font-family: var(--display); font-weight: 800; display: inline-flex; align-items: center; gap: 8px; }
+.pdot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.size { font-family: var(--mono); font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; white-space: nowrap; }
+.ln { height: 8px; border-radius: 4px; background: rgba(255,255,255,.13); }
+.yt { background: #0f0f0f; border: 1px solid var(--line); border-radius: 14px; padding: 12px; display: grid; gap: 12px; }
+.yt-bar { display: flex; align-items: center; gap: 6px; }
+.yt-bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); }
+.yt-bar span { margin-left: 10px; flex: 1; height: 18px; border-radius: 99px; background: rgba(255,255,255,.07); }
+.yt-meta { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+.yt-meta .av2 { width: 34px; height: 34px; border-radius: 50%; background: var(--yellow); }
+.yt-meta div { display: grid; gap: 7px; }
+.pod { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.pod .thumb { max-width: 260px; justify-self: center; }
+.pod-row { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: center; }
+.play { width: 40px; height: 40px; border-radius: 50%; background: var(--win); display: grid; place-items: center; }
+.play::before { content: ""; border-left: 12px solid #000; border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
+.pod-row div { display: grid; gap: 7px; }
+.prog { height: 4px; border-radius: 99px; background: rgba(255,255,255,.12); overflow: hidden; }
+.prog i { display: block; width: 38%; height: 100%; background: var(--fg); }
+.phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 2vw, 18px); margin-top: 18px; }
+.phones > * { min-width: 0; }
+.phone-card { padding: clamp(10px, 2vw, 20px); display: flex; flex-direction: column; gap: 14px; }
+.phone { position: relative; max-width: 230px; width: 100%; margin: 0 auto; padding: 6px; border-radius: clamp(18px, 3vw, 30px); background: #000; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 30px 60px -30px rgba(255,59,48,.45); transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.phone-card:hover .phone { transform: translateY(-6px) rotate(-1deg); }
+.phone::before { content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 28%; height: 9px; border-radius: 99px; background: #000; z-index: 8; }
+.screen { position: relative; border-radius: clamp(13px, 2.4vw, 24px); overflow: hidden; container-type: inline-size; }
+.acts { position: absolute; z-index: 4; right: 5%; bottom: 18%; display: grid; gap: 7cqw; }
+.acts i { width: 11cqw; aspect-ratio: 1; border-radius: 50%; background: rgba(255,255,255,.88); }
+.cap { position: absolute; z-index: 4; left: 6%; right: 26%; bottom: 5%; display: grid; gap: 3cqw; }
+.cap .ln { height: 3.5cqw; background: rgba(255,255,255,.8); }
+.cap .ln:first-child { width: 55%; }
+.safe { position: absolute; inset: 0; z-index: 7; opacity: 0; transition: opacity .3s; pointer-events: none; }
+.show-safe .safe { opacity: 1; }
+.zone { position: absolute; background: repeating-linear-gradient(45deg, rgba(255,59,48,.6) 0 5px, rgba(255,59,48,.25) 5px 10px); }
+.okbox { position: absolute; border: 2px dashed var(--yellow); display: grid; place-items: start center; }
+.okbox span { margin-top: 4px; font: 500 6cqw/1 var(--mono); background: var(--yellow); color: #111; padding: 2px 5px; border-radius: 4px; }
+.safe-note { margin-top: 16px; font-size: 14px; color: var(--muted); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.safe-note i { width: 22px; height: 12px; border-radius: 3px; background: repeating-linear-gradient(45deg, rgba(255,59,48,.8) 0 4px, rgba(255,59,48,.3) 4px 8px); }
+@media (max-width: 520px) { .phone-card .dev-label { flex-direction: column; align-items: start; } }
+
+/* add-ons */
+.addons-head { margin-top: clamp(48px, 7vw, 72px); display: flex; justify-content: space-between; align-items: end; gap: 12px 24px; flex-wrap: wrap; }
+.addons-head h3 { font-size: clamp(24px, 3vw, 32px); font-weight: 900; }
+.addons-head h3 em.s { color: var(--yellow); }
+.addons-head p { color: var(--muted); font-size: 15px; }
+.addons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 22px; }
+@media (max-width: 760px) { .addons { grid-template-columns: 1fr; } }
+.wa { position: fixed; right: 18px; bottom: 18px; z-index: 25; display: inline-flex; align-items: center; gap: 9px; padding: 12px 16px; border-radius: 999px; background: #25d366; color: #062b14; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 10px 30px rgba(37,211,102,.35); transition: transform .2s; }
+.wa svg { width: 20px; height: 20px; fill: currentColor; }
+.wa:hover { transform: translateY(-2px); }
+@media (max-width: 580px) { .wa span { display: none; } .wa { padding: 14px; right: 14px; bottom: 14px; } }
+.addon { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.addon .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.addon h4 { margin: 0; font-family: var(--display); font-size: 18px; font-weight: 800; letter-spacing: -.01em; }
+.addon .p { font-family: var(--display); font-weight: 900; font-size: 32px; letter-spacing: -.02em; white-space: nowrap; }
+.addon .p small { font-size: 13px; color: var(--muted); font-weight: 700; }
+.addon p { color: var(--muted); font-size: 14px; flex: 1; }
+.ratios { display: flex; gap: 6px; flex-wrap: wrap; }
+.ratios span { font-family: var(--mono); font-size: 11px; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--line); color: var(--fg); }
+
+/* popup form */
+dialog.modal { width: min(520px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 1px solid var(--line); border-radius: 24px; background: radial-gradient(70% 60% at 0% 0%, rgba(255,59,48,.35), transparent 60%), var(--bg-2); color: var(--fg); box-shadow: 0 40px 120px -20px rgba(0,0,0,.8); overflow: auto; }
+dialog.modal[open] { animation: pop .28s cubic-bezier(.2,.7,.2,1); }
+@keyframes pop { from { transform: translateY(14px) scale(.98); opacity: .4; } }
+dialog.modal::backdrop { background: rgba(5,5,6,.7); backdrop-filter: blur(6px); }
+.modal-in { padding: clamp(22px, 4vw, 32px); display: grid; gap: 16px; }
+.modal-top { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.modal-top h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 900; }
+.modal-top h2 em.s { color: var(--yellow); }
+.modal-top p { color: var(--muted); font-size: 14px; margin-top: 8px; }
+.x { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--glass); color: var(--fg); font-size: 20px; line-height: 1; cursor: pointer; }
+.x:hover { border-color: rgba(255,255,255,.3); }
+.modal .form { padding: 0; background: none; border: 0; backdrop-filter: none; }
+
+footer { padding-block: 40px; border-top: 1px solid var(--line); }
+.foot { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; font-size: 14px; color: var(--muted); }
+.foot nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--fg); }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <g fill="none" stroke="#ff3b30" stroke-width="4" stroke-linecap="round">
+        <path d="M14 46 A22 22 0 0 1 32 10 A22 22 0 0 1 54 32 A22 22 0 0 1 48 47"/>
+        <path d="M20 50 A16 16 0 0 1 16 32 A16 16 0 0 1 44 21"/>
+        <path d="M47 27 A16 16 0 0 1 42 45"/>
+        <path d="M30 56 A26 26 0 0 0 38 54"/>
+        <path d="M11 22 A26 26 0 0 1 22 9"/>
+      </g>
+      <path d="M27 23 L42 32 L27 41 Z" fill="#ffd60a" stroke="#ffd60a" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Thumbsprint home"><svg><use href="#mark"/></svg>THUMBSPRINT</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#proof">Work</a>
+      <a href="#testing">A/B testing</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-red" href="#contact">Free redesign <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill glass"><span class="dot"></span>YouTube thumbnail design studio · booking worldwide</span>
+      <div class="hero-grid">
+        <h1 class="rise">Better <span class="y">thumbs.</span><br>Bigger <em class="s">views.</em></h1>
+        <div class="hero-side rise d2">
+          <div class="hero-vis" aria-label="Before and after thumbnail example">
+            <div class="hv back"><span class="chip">Before · CTR <b>3.1%</b></span><div id="hv-back"></div></div>
+            <div class="hv front"><span class="chip">After · CTR <b>7.4%</b></span><div id="hv-front"></div></div>
+            <div class="glass boost"><strong>2.4×</strong>more clicks</div>
+          </div>
+          <div style="display:grid;gap:26px">
+          <p>Thumbnails and titles for YouTube creators, <b>A/B tested on your own channel</b> so you keep the version more people click. Built for finance, tech and education channels with 10K to 500K subscribers. Shorts, Reels and TikTok covers too.</p>
+          <div class="ctas">
+            <a class="btn btn-red" href="#contact">Get a free redesign <span class="arr">→</span></a>
+            <a class="btn btn-line" href="#pricing">See pricing</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wall rise d3" aria-label="Thumbnail examples">
+      <div class="row" id="row1"></div>
+      <div class="row" id="row2"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><div class="n">2.3<i>×</i></div><span>average CTR lift</span></div>
+        <div class="stat"><div class="n">24<i>h</i></div><span>delivery, every order</span></div>
+        <div class="stat"><div class="n">3</div><span>versions tested per video</span></div>
+        <div class="stat"><div class="n">IST</div><span>work overnight for US &amp; UK</span></div>
+      </div>
+      <p class="note">Thumbnails and figures on this page are prototype samples. Replace them with your real client work.</p>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section id="proof">
+    <div class="wrap">
+      <div class="head split">
+        <div style="display:grid;gap:18px">
+          <span class="label">Before / after</span>
+          <h2 class="h2">You get <em class="s">one second.</em></h2>
+        </div>
+        <p class="sub">Viewers decide on a phone, at the size of a stamp, while scrolling. Drag across the image to see what we change.</p>
+      </div>
+      <div class="compare" id="compare" style="--pos:50%">
+        <div id="ba-after"></div>
+        <div class="over" id="ba-before"></div>
+        <div class="bar"></div><div class="knob">⟷</div>
+        <span class="tag l">Before</span><span class="tag r">After</span>
+        <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+      <div class="rules">
+        <div><h3>Three words, not twelve</h3><p>Text that reads at phone size. The title tells the story, the thumbnail sells it.</p></div>
+        <div><h3>One focal point</h3><p>One face, one object or one moment. Clutter gets scrolled past.</p></div>
+        <div><h3>Built for the feed</h3><p>Colors that stand out against YouTube's light and dark themes.</p></div>
+        <div><h3>Honest to the video</h3><p>No misleading clickbait. Viewers stay, so YouTube keeps recommending it.</p></div>
+      </div>
+      <div class="specs"><span>1280 × 720 px</span><span>16:9</span><span>under 2 MB</span><span>checked at 168 × 94</span></div>
+    </div>
+  </section>
+
+  <!-- A/B TESTING -->
+  <section id="testing" style="padding-top:0">
+    <div class="wrap ab">
+      <div>
+        <span class="label">A/B testing</span>
+        <h2 class="h2" style="margin-top:18px">We don't guess. <em class="s">We test.</em></h2>
+        <div class="ab-list">
+          <div><i>01</i><p><b>Three versions per video.</b> Different faces, words and colors, all on brand.</p></div>
+          <div><i>02</i><p><b>Tested by YouTube itself.</b> Test &amp; Compare shows each version to different viewers.</p></div>
+          <div><i>03</i><p><b>You keep the winner.</b> What wins tells us how to design your next video.</p></div>
+        </div>
+      </div>
+      <div class="glass ab-card">
+        <div class="ab-top"><strong>Lost at 4,000 m · Test &amp; Compare</strong><small>Sample result</small></div>
+        <div class="vars" id="vars"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section style="padding-top:0">
+    <div class="wrap calc">
+      <div>
+        <span class="label">Views calculator</span>
+        <h2 class="h2" style="margin-top:18px">See your <em class="s">extra views.</em></h2>
+        <p class="sub" style="margin-top:18px">YouTube shows your video to people. Your thumbnail decides how many of them click. Move the sliders to see the extra views.</p>
+        <div class="formula">Views = Impressions × <b>CTR</b></div>
+      </div>
+      <div class="glass calc-box">
+        <div class="field"><label for="imp">Impressions per video <output id="imp-o">100,000</output></label><input type="range" id="imp" min="5000" max="1000000" step="5000" value="100000"></div>
+        <div class="field"><label for="ctr-now">Your CTR now <output id="now-o">3.0%</output></label><input type="range" id="ctr-now" min="1" max="12" step="0.1" value="3"></div>
+        <div class="field"><label for="ctr-new">CTR with a better thumbnail <output id="new-o">6.0%</output></label><input type="range" id="ctr-new" min="1" max="20" step="0.1" value="6"></div>
+        <div class="result"><small>Extra views per video</small><div class="num" id="extra">+3,000</div><small id="extra-month">≈ +24,000 views a month at 8 videos</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVERY PLATFORM -->
+  <section id="platforms" style="padding-top:0">
+    <div class="wrap" id="plat">
+      <div class="plat-top">
+        <div class="head" style="margin:0">
+          <span class="label">Every platform</span>
+          <h2 class="h2">One design. <em class="s">Every screen.</em></h2>
+          <p class="sub">We size your thumbnail for each platform and keep faces and words inside the area every app actually shows.</p>
+        </div>
+        <button class="btn btn-line toggle" type="button" id="safe-btn" aria-pressed="false">Show safe zones</button>
+      </div>
+
+      <div class="plat-grid">
+        <div class="glass device">
+          <div class="yt">
+            <div class="yt-bar"><i></i><i></i><i></i><span></span></div>
+            <div id="p-yt"></div>
+            <div class="yt-meta"><span class="av2"></span><div><span class="ln" style="width:82%"></span><span class="ln" style="width:46%"></span></div></div>
+          </div>
+          <div class="dev-label"><b><span class="pdot" style="background:var(--red)"></span>YouTube · Spotify video · LinkedIn</b><span class="size">16:9 · 1280×720</span></div>
+        </div>
+        <div class="glass device">
+          <div class="pod">
+            <div id="p-pod"></div>
+            <div class="pod-row"><span class="play"></span><div><span class="ln" style="width:70%"></span><span class="ln" style="width:40%"></span></div></div>
+            <div class="prog"><i></i></div>
+          </div>
+          <div class="dev-label"><b><span class="pdot" style="background:var(--win)"></span>Podcast show cover</b><span class="size">1:1 · 3000×3000</span></div>
+        </div>
+      </div>
+
+      <div class="phones">
+        <div class="glass phone-card">
+          <div class="phone"><div class="screen">
+            <div id="p-shorts"></div>
+            <div class="acts"><i></i><i></i><i></i><i></i></div>
+            <div class="cap"><span class="ln"></span><span class="ln"></span></div>
+            <div class="safe"><div class="zone" style="left:0;right:0;bottom:0;height:20%"></div><div class="zone" style="right:0;top:40%;bottom:20%;width:17%"></div><div class="okbox" style="left:4%;right:19%;top:6%;bottom:22%"><span>SAFE</span></div></div>
+          </div></div>
+          <div class="dev-label"><b><span class="pdot" style="background:var(--red)"></span>Shorts</b><span class="size">9:16</span></div>
+        </div>
+        <div class="glass phone-card">
+          <div class="phone"><div class="screen">
+            <div id="p-reels"></div>
+            <div class="acts"><i></i><i></i><i></i></div>
+            <div class="cap"><span class="ln"></span><span class="ln"></span></div>
+            <div class="safe"><div class="zone" style="left:0;right:0;top:0;height:12.5%"></div><div class="zone" style="left:0;right:0;bottom:0;height:12.5%"></div><div class="okbox" style="left:0;right:0;top:12.5%;bottom:12.5%"><span>3:4 GRID</span></div></div>
+          </div></div>
+          <div class="dev-label"><b><span class="pdot" style="background:linear-gradient(45deg,#f9a825,#e91e63,#7b1fa2)"></span>Reels</b><span class="size">9:16 · 3:4</span></div>
+        </div>
+        <div class="glass phone-card">
+          <div class="phone"><div class="screen">
+            <div id="p-tiktok"></div>
+            <div class="acts"><i></i><i></i><i></i><i></i></div>
+            <div class="cap"><span class="ln"></span><span class="ln"></span></div>
+            <div class="safe"><div class="zone" style="left:0;right:0;bottom:0;height:15%"></div><div class="zone" style="right:0;top:35%;bottom:15%;width:17%"></div><div class="okbox" style="left:4%;right:19%;top:8%;bottom:17%"><span>SAFE</span></div></div>
+          </div></div>
+          <div class="dev-label"><b><span class="pdot" style="background:linear-gradient(45deg,#25f4ee,#fe2c55)"></span>TikTok</b><span class="size">9:16</span></div>
+        </div>
+      </div>
+      <p class="safe-note"><i></i>Red areas get covered by app buttons, captions or the profile grid crop. We keep faces and text out of them.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="padding-top:0">
+    <div class="wrap">
+      <div class="head split">
+        <div style="display:grid;gap:18px">
+          <span class="label">Pricing · USD</span>
+          <h2 class="h2">Simple packages. <em class="s">Real results.</em></h2>
+        </div>
+        <p class="sub">Every package includes titles, source files and delivery within 24 hours. Weekly channels get the best rate on Monthly.</p>
+      </div>
+      <div class="plans">
+        <div class="glass plan">
+          <h3>Click Pack</h3><div class="price">$45</div><p class="desc">Thumbnail and title, written together.</p>
+          <ul><li>1 thumbnail design</li><li>5 title options</li><li>3 revisions</li><li>Source file</li></ul>
+          <a class="btn btn-line" href="#contact">Choose Click Pack</a>
+        </div>
+        <div class="glass plan">
+          <span class="badge">Most picked</span>
+          <h3>A/B Test Pro</h3><div class="price">$75</div><p class="desc">Three versions to test on your channel.</p>
+          <ul><li>3 thumbnail versions</li><li>5 title options</li><li>Test &amp; Compare setup guide</li><li>Result review after the test</li></ul>
+          <a class="btn btn-line" href="#contact">Choose A/B Test Pro</a>
+        </div>
+        <div class="plan hot" style="border-radius:22px">
+          <span class="badge">Best value</span>
+          <h3>Monthly</h3><div class="price">$450<small> /mo</small></div><p class="desc">For channels that post every week.</p>
+          <ul><li>8 videos, A/B Test Pro each</li><li>Priority 12-hour delivery</li><li>Monthly CTR report</li><li>Cancel anytime</li></ul>
+          <a class="btn btn-red" href="#contact">Start Monthly</a>
+        </div>
+      </div>
+      <div class="glass promise"><b>Win-or-redo promise.</b> If our thumbnail doesn't beat your old one in Test &amp; Compare, we redesign it free. Applies to long-form videos.</div>
+
+      <div class="addons-head">
+        <h3>Shorts, Reels <em class="s">&amp; TikTok.</em></h3>
+        <p>Vertical formats, sized and safe-zone checked for every app.</p>
+      </div>
+      <div class="addons">
+        <div class="glass addon">
+          <div class="top"><h4>Shorts Pack</h4><span class="p">$60</span></div>
+          <div class="ratios"><span>9:16</span><span>Shorts</span><span>Reels</span><span>TikTok</span></div>
+          <p>10 vertical covers. Each one works on YouTube Shorts, Instagram Reels and TikTok, with a grid-safe version for your Instagram profile.</p>
+          <a class="btn btn-line" href="#contact">Choose Shorts Pack</a>
+        </div>
+        <div class="glass addon">
+          <div class="top"><h4>Repurpose</h4><span class="p">+$20</span></div>
+          <div class="ratios"><span>9:16</span><span>3:4</span><span>16:9</span></div>
+          <p>Add to any package. Your thumbnail resized for Shorts, Reels, TikTok, LinkedIn and Facebook, keeping faces and text in the safe area.</p>
+          <a class="btn btn-line" href="#contact">Add Repurpose</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><span class="label">How it works</span><h2 class="h2">From video link to <em class="s">winning thumbnail.</em></h2></div>
+      <div class="steps">
+        <div class="glass step"><span class="n">1</span><h3>Send your video</h3><p>Share the link or a short brief, plus any photos or frames you want used.</p><span class="when">Day 0</span></div>
+        <div class="glass step"><span class="n">2</span><h3>Get your designs</h3><p>Thumbnails and title options arrive, ready to upload.</p><span class="when">Within 24 h</span></div>
+        <div class="glass step"><span class="n">3</span><h3>Run the test</h3><p>Upload all three to YouTube Studio's Test &amp; Compare. We show you how.</p><span class="when">Days 1–14</span></div>
+        <div class="glass step"><span class="n">4</span><h3>Keep the winner</h3><p>YouTube picks the version with the most watch time. We learn from it for your next video.</p><span class="when">After the test</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div class="head" style="margin:0"><span class="label">Questions</span><h2 class="h2">Before <em class="s">you order.</em></h2></div>
+      <div class="faq">
+        <details open><summary>Can a thumbnail alone get me more views?</summary><p>A thumbnail raises your click-through rate, so more of the people YouTube shows your video to will click. Views also depend on your content keeping them watching. We promise a better CTR, and your video does the rest.</p></details>
+        <details><summary>What do you need from me?</summary><p>Your video link or topic, the title idea, and any photos or video frames you want used. A clear photo of your face with a strong expression helps a lot.</p></details>
+        <details><summary>How does A/B testing work?</summary><p>YouTube Studio's Test &amp; Compare lets you upload up to three thumbnails for one video. YouTube shows each to different viewers and tells you which one got the most watch time.</p></details>
+        <details><summary>Which time zone are you in?</summary><p>We work from India (IST). If you're in the US or UK, send your video in the evening and the designs are ready when you wake up.</p></details>
+        <details><summary>Do you design for Shorts, Reels and TikTok?</summary><p>Yes. Vertical covers are 1080 × 1920 and we keep faces and text in the area each app shows. YouTube now lets channels upload custom Shorts thumbnails, but A/B testing is only for long-form videos, so the win-or-redo promise covers those.</p></details>
+        <details><summary>How do I pay?</summary><p>PayPal, Wise, or card through Fiverr and Upwork. Monthly clients pay at the start of each month.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <span class="label" style="color:rgba(246,245,243,.8)">Free redesign</span>
+          <h2 style="margin-top:18px">See the difference <em class="s">before you pay.</em></h2>
+          <p class="sub">Send your worst-performing video. We'll redesign its thumbnail free, so you can judge our work on your own channel.</p>
+          <div class="mails">
+            <a class="glass mail" href="mailto:hello@thumbsprint.com">hello@thumbsprint.com</a>
+            <a class="glass mail" href="/go/whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.3 4.4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4l-.5-.3-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2c-.2-.5-.4-.5-.6-.5h-.5z"/></svg>WhatsApp us</a>
+          </div>
+        </div>
+        <form class="glass form" id="req" novalidate>
+          <label for="f-name">Your name<input id="f-name" type="text" placeholder="Alex Carter" autocomplete="name"></label>
+          <label for="f-channel">Channel link<input id="f-channel" type="url" placeholder="https://youtube.com/@yourchannel"></label>
+          <label for="f-plan">Interested in
+            <select id="f-plan"><option>Free redesign</option><option>Click Pack · $45</option><option selected>A/B Test Pro · $75</option><option>Monthly · $450</option><option>Shorts Pack · $60</option><option>Repurpose add-on · $20</option></select>
+          </label>
+          <label for="f-note">Anything else?<textarea id="f-note" placeholder="Video link, niche, upload schedule…"></textarea></label>
+          <button class="btn btn-red" type="submit">Send request <span class="arr">→</span></button>
+          <p class="form-msg" id="form-msg" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><svg><use href="#mark"/></svg>THUMBSPRINT</a>
+    <nav aria-label="Footer"><a href="#proof">Work</a><a href="#testing">A/B testing</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+    <span>© 2026 Thumbsprint · Better Thumbs. Bigger Views.</span>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="m-title">
+  <div class="modal-in">
+    <div class="modal-top">
+      <div><h2 id="m-title">Let's get you <em class="s">more clicks.</em></h2><p>Tell us about your channel. We reply within 12 hours.</p></div>
+      <button class="x" type="button" id="m-close" aria-label="Close">×</button>
+    </div>
+    <form class="form" id="m-form" novalidate>
+      <label for="m-name">Your name<input id="m-name" type="text" placeholder="Alex Carter" autocomplete="name"></label>
+      <label for="m-channel">Channel link<input id="m-channel" type="url" placeholder="https://youtube.com/@yourchannel"></label>
+      <label for="m-plan">Interested in
+        <select id="m-plan"><option>Free redesign</option><option>Click Pack · $45</option><option>A/B Test Pro · $75</option><option>Monthly · $450</option><option>Shorts Pack · $60</option><option>Repurpose add-on · $20</option></select>
+      </label>
+      <label for="m-note">Anything else?<textarea id="m-note" placeholder="Video link, niche, upload schedule…"></textarea></label>
+      <button class="btn btn-red" type="submit">Send request <span class="arr">→</span></button>
+      <p class="form-msg" id="m-msg" hidden></p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+const ARROW = (s) => `<svg class="arrow" style="${s}" viewBox="0 0 40 40"><path d="M6 34 L30 10 M14 10 H30 V26" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const CHART = (c, up) => `<svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="${up ? '0,36 18,30 32,33 50,20 66,23 100,2' : '0,4 22,8 40,6 58,22 76,18 100,38'}" fill="none" stroke="${c}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+
+function thumb(d, shape = '') {
+  let inner = '';
+  const hl = (cls = '') => `<div class="hl ${cls}">${d.a}${d.b ? `<span>${d.b}</span>` : ''}</div>`;
+  switch (d.t) {
+    case 'face': inner = `<div class="sil" style="--rim:${d.rim}"></div>${hl(d.dark ? 'dk' : '')}`; break;
+    case 'chart': inner = CHART(d.c, d.up) + hl('wide'); break;
+    case 'moon': inner = `<div class="moon"></div><div class="ridge"></div>${hl('bot wide')}`; break;
+    case 'peak': inner = `<div class="peak2"></div><div class="peak"></div>${hl()}${ARROW('right:8%;top:40%')}`; break;
+    case 'mic': inner = `<div class="mic"></div>${hl()}`; break;
+    case 'vs': inner = `<div class="half l" style="background:${d.c1}">${d.a}</div><div class="half r" style="background:${d.c2}">${d.b}</div><div class="vs">VS</div>`; break;
+    case 'dull': inner = `<div class="hill"></div><div class="dull-txt">${d.a}</div>`; break;
+  }
+  return `<div class="thumb ${shape}" style="background:${d.bg || '#222'}">${inner}${d.dur ? `<span class="dur">${d.dur}</span>` : ''}</div>`;
+}
+
+const R1 = [
+  { t: 'face', bg: 'linear-gradient(135deg,#ff3b30,#6d0b06)', rim: '#ffd60a', a: 'I quit', b: 'my $200K job', dur: '21:04', ctr: '8.2%' },
+  { t: 'chart', bg: '#07140d', c: '#34c759', up: true, a: '$0 → $10K', b: 'in 90 days', dur: '16:05', ctr: '8.1%' },
+  { t: 'moon', bg: 'linear-gradient(135deg,#0f1e38,#0c5f8f)', a: 'Alone for', b: '30 nights', dur: '24:10', ctr: '6.9%' },
+  { t: 'vs', c1: '#ff3b30', c2: '#1d3cff', a: '$1', b: '$1,000', dur: '14:22', ctr: '9.1%' },
+  { t: 'mic', bg: 'linear-gradient(120deg,#1b1b1f,#3a2d5c)', a: 'He said', b: 'no to $1M', dur: '1:12:30', ctr: '7.2%' },
+  { t: 'face', bg: 'linear-gradient(135deg,#ffd60a,#ff8a00)', rim: '#ffffff', dark: true, a: 'Day 100', b: 'hardcore', dur: '38:51', ctr: '9.4%' },
+];
+const R2 = [
+  { t: 'peak', bg: 'radial-gradient(circle at 75% 35%,#ff8a3d 0%,#ff3b30 38%,#6d0d08 100%)', a: 'Lost', b: 'at 4,000 m', dur: '18:42', ctr: '7.4%' },
+  { t: 'face', bg: 'linear-gradient(135deg,#1d3cff,#090f3d)', rim: '#ff3b30', a: "Don't buy", b: 'this laptop', dur: '12:09', ctr: '8.8%' },
+  { t: 'chart', bg: '#1a0707', c: '#ff3b30', up: false, a: '−87%', b: 'what happened?', dur: '19:30', ctr: '7.9%' },
+  { t: 'face', bg: 'linear-gradient(135deg,#0c7a3e,#04260f)', rim: '#ffd60a', a: 'Tamil food', b: 'in Tokyo', dur: '15:47', ctr: '6.6%' },
+  { t: 'vs', c1: '#111', c2: '#ffd60a', a: 'Old', b: 'New', dur: '10:58', ctr: '8.0%' },
+  { t: 'moon', bg: 'linear-gradient(135deg,#2a0f3d,#6b1f6e)', a: 'Night in', b: 'a haunted fort', dur: '27:13', ctr: '7.6%' },
+];
+const tile = (d) => `<div class="tile">${thumb(d)}<span class="chip">CTR <b>${d.ctr}</b></span></div>`;
+// each row is doubled so the scroll loops without a gap
+document.getElementById('row1').innerHTML = [...R1, ...R1].map(tile).join('');
+document.getElementById('row2').innerHTML = [...R2, ...R2].map(tile).join('');
+
+// before / after
+const BEFORE = { t: 'dull', bg: 'linear-gradient(180deg,#9aa3a8 0%,#b9bfb8 55%,#7e8a6e 56%,#6f7a60 100%)', a: 'My trip vlog part 3 – day 2 in the mountains', dur: '18:42' };
+document.getElementById('ba-after').innerHTML = thumb(R2[0]);
+document.getElementById('ba-before').innerHTML = thumb(BEFORE);
+document.getElementById('hv-back').innerHTML = thumb(BEFORE);
+document.getElementById('hv-front').innerHTML = thumb(R2[0]);
+
+// every platform: one design in every format
+const SHOW = R1[0];
+document.getElementById('p-yt').innerHTML = thumb(SHOW);
+['p-shorts', 'p-reels', 'p-tiktok'].forEach(id => { document.getElementById(id).innerHTML = thumb({ ...SHOW, dur: '' }, 'v'); });
+document.getElementById('p-pod').innerHTML = thumb({ t: 'mic', bg: 'linear-gradient(135deg,#3a2d5c,#120d22)', a: 'The Click', b: 'Show' }, 'sq');
+const safeBtn = document.getElementById('safe-btn'), plat = document.getElementById('plat');
+safeBtn.addEventListener('click', () => {
+  const on = plat.classList.toggle('show-safe');
+  safeBtn.setAttribute('aria-pressed', on);
+  safeBtn.textContent = on ? 'Hide safe zones' : 'Show safe zones';
+});
+const cmp = document.getElementById('compare'), rng = document.getElementById('ba-range');
+rng.addEventListener('input', () => cmp.style.setProperty('--pos', rng.value + '%'));
+
+// A/B variants
+const VARS = [
+  { name: 'A · Original', ctr: 3.1, d: BEFORE },
+  { name: 'B · Thumbsprint', ctr: 7.4, d: R2[0], win: true },
+  { name: 'C · Thumbsprint', ctr: 5.2, d: { t: 'moon', bg: 'linear-gradient(135deg,#0f1e38,#0c5f8f)', a: 'Night at', b: '4,000 m', dur: '18:42' } },
+];
+document.getElementById('vars').innerHTML = VARS.map(v => `
+  <div class="var ${v.win ? 'win' : ''}">
+    ${thumb(v.d)}
+    <div class="meta"><b>${v.name}</b>${v.win ? '<span class="w">WINNER</span>' : ''}</div>
+    <div class="meter"><i style="--w:${(v.ctr / 8 * 100).toFixed(0)}%"></i></div>
+    <div class="pct">CTR <b>${v.ctr.toFixed(1)}%</b></div>
+  </div>`).join('');
+
+// CTR calculator
+const fmt = n => Math.round(n).toLocaleString('en-US');
+const imp = document.getElementById('imp'), now = document.getElementById('ctr-now'), nw = document.getElementById('ctr-new');
+function calc() {
+  const i = +imp.value, a = +now.value, b = +nw.value, extra = i * (b - a) / 100, sign = extra >= 0 ? '+' : '−';
+  document.getElementById('imp-o').textContent = fmt(i);
+  document.getElementById('now-o').textContent = a.toFixed(1) + '%';
+  document.getElementById('new-o').textContent = b.toFixed(1) + '%';
+  document.getElementById('extra').textContent = sign + fmt(Math.abs(extra));
+  document.getElementById('extra-month').textContent = '≈ ' + sign + fmt(Math.abs(extra * 8)) + ' views a month at 8 videos';
+}
+[imp, now, nw].forEach(el => el.addEventListener('input', calc));
+calc();
+
+// forms: posted to /api/contact, which the Vercel middleware forwards to the inbox set in CONTACT_EMAIL
+const FORM_ENDPOINT = '/api/contact';
+function wire(formId, p, msgId) {
+  const form = document.getElementById(formId), msg = document.getElementById(msgId);
+  const btn = form.querySelector('button[type="submit"]');
+  const val = id => document.getElementById(p + id).value.trim();
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    msg.hidden = false;
+    if (!val('name') || !val('channel')) {
+      msg.style.color = 'var(--yellow)';
+      msg.textContent = 'Add your name and channel link so we know where to look.';
+      return;
+    }
+    const plan = document.getElementById(p + 'plan').value;
+    btn.disabled = true;
+    msg.style.color = 'var(--muted)';
+    msg.textContent = 'Sending…';
+    try {
+      const r = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: val('name'), channel: val('channel'), plan, message: val('note'), _subject: 'Thumbsprint request: ' + plan, _template: 'table', _captcha: 'false' })
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok || !data.ok) throw new Error(data.error || 'send failed');
+      msg.style.color = 'var(--win)';
+      msg.textContent = 'Sent. We reply within 12 hours. In a hurry? Message us on WhatsApp.';
+      form.reset();
+    } catch {
+      msg.style.color = 'var(--yellow)';
+      msg.textContent = 'Could not send. Please message us on WhatsApp or email hello@thumbsprint.com.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+wire('req', 'f-', 'form-msg');
+wire('m-form', 'm-', 'm-msg');
+
+// every "#contact" button opens the popup form where the visitor is, with their plan picked
+const modal = document.getElementById('modal'), mPlan = document.getElementById('m-plan');
+const PLANS = ['Click Pack', 'A/B Test Pro', 'Monthly', 'Shorts Pack', 'Repurpose'];
+document.querySelectorAll('a[href="#contact"]').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const label = btn.textContent;
+    const plan = PLANS.find(p => label.includes(p));
+    mPlan.selectedIndex = plan ? [...mPlan.options].findIndex(o => o.text.startsWith(plan)) : 0;
+    document.getElementById('m-msg').hidden = true;
+    if (typeof modal.showModal === 'function') { modal.showModal(); document.getElementById('m-name').focus(); }
+    else document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+document.getElementById('m-close').addEventListener('click', () => modal.close());
+modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+</script>
+
+<a class="wa" href="/go/whatsapp" target="_blank" rel="noopener" aria-label="Chat with Thumbsprint on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.3 4.4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4l-.5-.3-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2c-.2-.5-.4-.5-.6-.5h-.5z"/></svg><span>WhatsApp</span></a>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
