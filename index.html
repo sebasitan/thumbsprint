@@ -41,9 +41,10 @@
     "name": "Thumbnail design packages",
     "itemListElement": [
       { "@type": "Offer", "name": "Click Pack", "price": "45", "priceCurrency": "USD", "description": "1 thumbnail and 5 title options" },
-      { "@type": "Offer", "name": "A/B Test Pro", "price": "75", "priceCurrency": "USD", "description": "3 thumbnail versions for YouTube Test & Compare, 5 titles" },
-      { "@type": "Offer", "name": "Monthly", "price": "450", "priceCurrency": "USD", "description": "8 videos a month with A/B Test Pro" },
-      { "@type": "Offer", "name": "Shorts Pack", "price": "60", "priceCurrency": "USD", "description": "10 vertical covers for Shorts, Reels and TikTok" }
+      { "@type": "Offer", "name": "A/B Test Pro", "price": "89", "priceCurrency": "USD", "description": "3 thumbnail versions for YouTube A/B testing, 5 titles, result review" },
+      { "@type": "Offer", "name": "Monthly Core", "price": "450", "priceCurrency": "USD", "description": "8 videos a month, 1 thumbnail and 5 titles each" },
+      { "@type": "Offer", "name": "Monthly Test", "price": "650", "priceCurrency": "USD", "description": "8 videos a month with A/B Test Pro, 3 versions each" },
+      { "@type": "Offer", "name": "Clip Pack", "price": "60", "priceCurrency": "USD", "description": "10 vertical covers for Shorts, Reels and TikTok clips" }
     ]
   }
 }
@@ -281,8 +282,9 @@ header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; 
 .presets button:hover { border-color: var(--yellow); color: var(--yellow); }
 
 /* pricing */
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
-@media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+.plans { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+@media (max-width: 1080px) { .plans { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .plans { grid-template-columns: 1fr; } }
 .plan { padding: 28px 24px; display: flex; flex-direction: column; gap: 18px; position: relative; }
 .plan.hot { background: linear-gradient(var(--bg-2), var(--bg-2)) padding-box, linear-gradient(160deg, var(--red), var(--yellow) 60%, rgba(255,255,255,.08)) border-box; border: 1px solid transparent; box-shadow: 0 30px 80px -30px rgba(255,59,48,.5); }
 .plan .badge { position: absolute; top: -12px; right: 20px; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; background: var(--red); color: #fff; padding: 5px 10px; border-radius: 999px; }
@@ -476,7 +478,7 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <span class="pill glass"><span class="dot"></span>YouTube thumbnail design studio · booking worldwide</span>
+      <span class="pill glass"><span class="dot"></span>Overnight thumbnail &amp; title packaging for YouTube · booking worldwide</span>
       <div class="hero-grid">
         <h1 class="rise">Better <span class="y">thumbs.</span><br>Bigger <em class="s">views.</em></h1>
         <div class="hero-side rise d2">
@@ -486,7 +488,7 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
             <div class="glass boost"><strong>2.4×</strong>more clicks</div>
           </div>
           <div style="display:grid;gap:26px">
-          <p>Thumbnails and titles for YouTube creators, <b>A/B tested on your own channel</b> so you keep the version more people click. Built for finance, tech and education channels with 10K to 500K subscribers. Shorts, Reels and TikTok covers too.</p>
+          <p>Your overnight packaging partner. Send a video in the evening, wake up to thumbnails and titles <b>A/B tested on your own channel</b> so you keep the version more people click. Built for finance, tech and education channels with 10K to 500K subscribers.</p>
           <div class="ctas">
             <a class="btn btn-red" href="#contact">Get a free redesign <span class="arr">→</span></a>
             <a class="btn btn-line" href="#pricing">See pricing</a>
@@ -649,39 +651,44 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
           <span class="label">Pricing · USD</span>
           <h2 class="h2">Simple packages. <em class="s">Real results.</em></h2>
         </div>
-        <p class="sub">Every package includes titles, source files and delivery within 24 hours. Weekly channels get the best rate on Monthly.</p>
+        <p class="sub">Every package includes titles, source files and delivery within 24 hours. Weekly channels get the best rate on a Monthly plan.</p>
       </div>
       <div class="plans">
         <div class="glass plan">
           <h3>Click Pack</h3><div class="price">$45</div><p class="desc">Thumbnail and title, written together.</p>
-          <ul><li>1 thumbnail design</li><li>5 title options</li><li>3 revisions</li><li>Source file</li></ul>
+          <ul><li>1 thumbnail design</li><li>5 title options</li><li>2 revision rounds</li><li>Source file</li></ul>
           <a class="btn btn-line" href="#contact">Choose Click Pack</a>
         </div>
-        <div class="glass plan">
-          <span class="badge">Most picked</span>
-          <h3>A/B Test Pro</h3><div class="price">$75</div><p class="desc">Three versions to test on your channel.</p>
-          <ul><li>3 thumbnail versions</li><li>5 title options</li><li>Test &amp; Compare setup guide</li><li>Result review after the test</li></ul>
-          <a class="btn btn-line" href="#contact">Choose A/B Test Pro</a>
-        </div>
         <div class="plan hot" style="border-radius:22px">
+          <span class="badge">Most picked</span>
+          <h3>A/B Test Pro</h3><div class="price">$89</div><p class="desc">Three versions to test on your channel.</p>
+          <ul><li>3 thumbnail versions</li><li>5 title options</li><li>A/B test setup guide</li><li>Result review after the test</li><li>2 revision rounds</li></ul>
+          <a class="btn btn-red" href="#contact">Choose A/B Test Pro</a>
+        </div>
+        <div class="glass plan">
+          <h3>Monthly Core</h3><div class="price">$450<small> /mo</small></div><p class="desc">For weekly channels that want one strong thumbnail per video.</p>
+          <ul><li>8 videos, 1 thumbnail + 5 titles each</li><li>Priority 12-hour delivery</li><li>Monthly CTR report</li><li>Cancel anytime</li></ul>
+          <a class="btn btn-line" href="#contact">Start Monthly Core</a>
+        </div>
+        <div class="glass plan">
           <span class="badge">Best value</span>
-          <h3>Monthly</h3><div class="price">$450<small> /mo</small></div><p class="desc">For channels that post every week.</p>
-          <ul><li>8 videos, A/B Test Pro each</li><li>Priority 12-hour delivery</li><li>Monthly CTR report</li><li>Cancel anytime</li></ul>
-          <a class="btn btn-red" href="#contact">Start Monthly</a>
+          <h3>Monthly Test</h3><div class="price">$650<small> /mo</small></div><p class="desc">For weekly channels that test every video.</p>
+          <ul><li>8 videos, A/B Test Pro each</li><li>3 versions + 5 titles per video</li><li>Test setup and result review, every video</li><li>Priority 12-hour delivery</li><li>Monthly CTR report</li></ul>
+          <a class="btn btn-line" href="#contact">Start Monthly Test</a>
         </div>
       </div>
-      <div class="glass promise"><b>Win-or-redo promise.</b> If our thumbnail doesn't beat your old one in Test &amp; Compare, we redesign it free. Applies to long-form videos.</div>
+      <div class="glass promise"><b>Win-or-redo promise.</b> If our thumbnail doesn't beat your current one on watch-time share in YouTube's A/B test within 14 days, we redesign it free, once. Applies to long-form videos on A/B Test Pro and Monthly Test.</div>
 
       <div class="addons-head">
-        <h3>Shorts, Reels <em class="s">&amp; TikTok.</em></h3>
-        <p>Vertical formats, sized and safe-zone checked for every app.</p>
+        <h3>Clips, Shorts <em class="s">&amp; Reels.</em></h3>
+        <p>Vertical covers for the clips you cut from long videos and podcast episodes, safe-zone checked for every app.</p>
       </div>
       <div class="addons">
         <div class="glass addon">
-          <div class="top"><h4>Shorts Pack</h4><span class="p">$60</span></div>
+          <div class="top"><h4>Clip Pack</h4><span class="p">$60</span></div>
           <div class="ratios"><span>9:16</span><span>Shorts</span><span>Reels</span><span>TikTok</span></div>
-          <p>10 vertical covers. Each one works on YouTube Shorts, Instagram Reels and TikTok, with a grid-safe version for your Instagram profile.</p>
-          <a class="btn btn-line" href="#contact">Choose Shorts Pack</a>
+          <p>10 vertical covers for clips from your long videos or podcast episodes. Each one works on YouTube Shorts, Instagram Reels and TikTok, with a grid-safe version for your Instagram profile.</p>
+          <a class="btn btn-line" href="#contact">Choose Clip Pack</a>
         </div>
         <div class="glass addon">
           <div class="top"><h4>Repurpose</h4><span class="p">+$20</span></div>
@@ -740,7 +747,7 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
           <label for="f-name">Your name<input id="f-name" type="text" placeholder="Alex Carter" autocomplete="name"></label>
           <label for="f-channel">Channel link<input id="f-channel" type="url" placeholder="https://youtube.com/@yourchannel"></label>
           <label for="f-plan">Interested in
-            <select id="f-plan"><option>Free redesign</option><option>Click Pack · $45</option><option selected>A/B Test Pro · $75</option><option>Monthly · $450</option><option>Shorts Pack · $60</option><option>Repurpose add-on · $20</option></select>
+            <select id="f-plan"><option>Free redesign</option><option>Click Pack · $45</option><option selected>A/B Test Pro · $89</option><option>Monthly Core · $450</option><option>Monthly Test · $650</option><option>Clip Pack · $60</option><option>Repurpose add-on · $20</option></select>
           </label>
           <label for="f-note">Anything else?<textarea id="f-note" placeholder="Video link, niche, upload schedule…"></textarea></label>
           <button class="btn btn-red" type="submit">Send request <span class="arr">→</span></button>
@@ -769,7 +776,7 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
       <label for="m-name">Your name<input id="m-name" type="text" placeholder="Alex Carter" autocomplete="name"></label>
       <label for="m-channel">Channel link<input id="m-channel" type="url" placeholder="https://youtube.com/@yourchannel"></label>
       <label for="m-plan">Interested in
-        <select id="m-plan"><option>Free redesign</option><option>Click Pack · $45</option><option>A/B Test Pro · $75</option><option>Monthly · $450</option><option>Shorts Pack · $60</option><option>Repurpose add-on · $20</option></select>
+        <select id="m-plan"><option>Free redesign</option><option>Click Pack · $45</option><option>A/B Test Pro · $89</option><option>Monthly Core · $450</option><option>Monthly Test · $650</option><option>Clip Pack · $60</option><option>Repurpose add-on · $20</option></select>
       </label>
       <label for="m-note">Anything else?<textarea id="m-note" placeholder="Video link, niche, upload schedule…"></textarea></label>
       <button class="btn btn-red" type="submit">Send request <span class="arr">→</span></button>
@@ -914,7 +921,7 @@ wire('m-form', 'm-', 'm-msg');
 
 // every "#contact" button opens the popup form where the visitor is, with their plan picked
 const modal = document.getElementById('modal'), mPlan = document.getElementById('m-plan');
-const PLANS = ['Click Pack', 'A/B Test Pro', 'Monthly', 'Shorts Pack', 'Repurpose'];
+const PLANS = ['Click Pack', 'A/B Test Pro', 'Monthly Core', 'Monthly Test', 'Clip Pack', 'Repurpose'];
 document.querySelectorAll('a[href="#contact"]').forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
