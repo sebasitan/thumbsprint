@@ -274,6 +274,11 @@ header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; 
 .result { border-top: 1px solid var(--line); padding-top: 22px; display: grid; gap: 6px; }
 .result .num { font-family: var(--display); font-weight: 900; font-size: clamp(44px, 6vw, 72px); line-height: 1; color: var(--yellow); font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
 .result small { color: var(--muted); font-size: 14px; }
+.calc-note { margin-top: 18px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.field .hint { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.presets { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.presets button { font: inherit; font-size: 12px; color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.presets button:hover { border-color: var(--yellow); color: var(--yellow); }
 
 /* pricing */
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
@@ -559,14 +564,15 @@ footer { padding-block: 40px; border-top: 1px solid var(--line); }
       <div>
         <span class="label">Views calculator</span>
         <h2 class="h2" style="margin-top:18px">See your <em class="s">extra views.</em></h2>
-        <p class="sub" style="margin-top:18px">YouTube shows your video to people. Your thumbnail decides how many of them click. Move the sliders to see the extra views.</p>
-        <div class="formula">Views = Impressions × <b>CTR</b></div>
+        <p class="sub" style="margin-top:18px">YouTube shows your video to people. Your thumbnail decides how many of them click. Move the sliders to estimate the extra views a better thumbnail could bring.</p>
+        <div class="formula">Views from impressions = Impressions × <b>CTR</b></div>
+        <p class="calc-note">A simplified estimate. It counts only views that come from thumbnail impressions on YouTube (Home, Suggested, Search), assumes your impressions stay the same, and leaves out Shorts, embeds and external traffic. YouTube says half of all channels have a CTR between 2% and 10%, and CTR usually falls as a video reaches more people. YouTube ranks on watch time as well as clicks, so a thumbnail has to honestly represent the video.</p>
       </div>
       <div class="glass calc-box">
-        <div class="field"><label for="imp">Impressions per video <output id="imp-o">100,000</output></label><input type="range" id="imp" min="5000" max="1000000" step="5000" value="100000"></div>
+        <div class="field"><label for="imp">Impressions per video <output id="imp-o">100,000</output></label><input type="range" id="imp" min="5000" max="1000000" step="5000" value="100000"><span class="hint">Use the 28-day figure from YouTube Studio, Reach tab. First-day numbers are noisy.</span></div>
         <div class="field"><label for="ctr-now">Your CTR now <output id="now-o">3.0%</output></label><input type="range" id="ctr-now" min="1" max="12" step="0.1" value="3"></div>
-        <div class="field"><label for="ctr-new">CTR with a better thumbnail <output id="new-o">6.0%</output></label><input type="range" id="ctr-new" min="1" max="20" step="0.1" value="6"></div>
-        <div class="result"><small>Extra views per video</small><div class="num" id="extra">+3,000</div><small id="extra-month">≈ +24,000 views a month at 8 videos</small></div>
+        <div class="field"><label for="ctr-new">CTR with a better thumbnail <output id="new-o">4.0%</output></label><input type="range" id="ctr-new" min="1" max="10" step="0.1" value="4"><span class="hint presets">Try: <button type="button" data-lift="1">typical, +1 point</button><button type="button" data-lift="x2">strong, double</button></span></div>
+        <div class="result"><small>Extra views from thumbnail impressions, per video</small><div class="num" id="extra">+1,000</div><small id="extra-month">≈ +8,000 a month at 8 videos, each with the impressions above</small></div>
       </div>
     </div>
   </section>
@@ -856,9 +862,14 @@ function calc() {
   document.getElementById('now-o').textContent = a.toFixed(1) + '%';
   document.getElementById('new-o').textContent = b.toFixed(1) + '%';
   document.getElementById('extra').textContent = sign + fmt(Math.abs(extra));
-  document.getElementById('extra-month').textContent = '≈ ' + sign + fmt(Math.abs(extra * 8)) + ' views a month at 8 videos';
+  document.getElementById('extra-month').textContent = '≈ ' + sign + fmt(Math.abs(extra * 8)) + ' a month at 8 videos, each with the impressions above';
 }
 [imp, now, nw].forEach(el => el.addEventListener('input', calc));
+document.querySelectorAll('.presets button').forEach(b => b.addEventListener('click', () => {
+  const a = +now.value, lift = b.dataset.lift === 'x2' ? a * 2 : a + 1;
+  nw.value = Math.min(+nw.max, Math.max(+nw.min, lift)).toFixed(1);
+  calc();
+}));
 calc();
 
 // forms: posted to /api/contact, which the Vercel middleware forwards to the inbox set in CONTACT_EMAIL
